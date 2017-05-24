@@ -14,7 +14,7 @@ public class MainStory {
 		static int ammo = 10;
 	public static void main(String[] args) throws InterruptedException {
 	
-	/*	center();
+		center();
 		print("You have woken up inside of a mysterious room with no light.");
 		Screen.waitClear(3);
 		print("You hear a loud bang at the door. ");
@@ -28,10 +28,10 @@ public class MainStory {
 		print("You've noticed you're incredibly hungry, so you go to look for food.");
 		center();
 		waitClear(3);
-		getFood(); */
+		getFood(); 
 		nextLocation();
 		}
-	//}
+	}
 	
 	public static void nextLocation() throws InterruptedException{
 	 String[] firstLocations = {"the Church", "the Grocery Store","the Mall","the Police station"};
@@ -108,6 +108,9 @@ public class MainStory {
 					center();
 				}
 			}
+		}
+		else{
+			print("You don't encounter any problems.\nNutrition Level: "+nutritionLevel);
 		}
 	}
 	public static void groceryStore() throws InterruptedException{
@@ -326,9 +329,11 @@ public class MainStory {
 		}
 	}
 	public static void print(String str){
+		//This method is used to replace system.out.println in a shorter version.
 		System.out.println(str);
 	}
 	public static void print(int str){
+		//Because there are some points where it is required  
 		System.out.println(str);
 	}
 }
